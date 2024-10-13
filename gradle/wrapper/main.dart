@@ -55,6 +55,11 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   }
 
   @override
+void dispose() {
+    _animationController.dispose();
+    _controller.dispose();
+    super.dispose();
+  }
 
 
   void _animateButton() {
